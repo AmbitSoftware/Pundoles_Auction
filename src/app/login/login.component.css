@@ -1,0 +1,19 @@
+.loginForm {
+    width: 30%;
+    margin: 5% auto;
+    background: #e0e1e7;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.login-section {
+    width: 100%;
+}
+#loginButton {
+    width: 40%;
+    border: none;
+    margin: 30px auto;
+    background: #185cbe;
+}
+#loginButton:hover {
+    background: #0d3876;
+}

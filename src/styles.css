@@ -1,0 +1,160 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: #F2F2F4;
+}
+.nopadding{
+    padding:0;
+}
+input.form-control, select.form-control {
+    font-size: 14px;
+}
+img#logoImage {
+    background: #c7d1e7;
+    padding: 5px 10px;
+    border: 1px solid #868181;
+}
+.bg-newbg{
+    background: #0d3876;
+    font-size: 14px;
+    /* padding: 0px 1rem; */
+}
+a.newbg , button.newbg {
+    background: #06C6A4;
+    border: #06C6A4;
+    font-size: 15px;
+}
+a.btn.link-btn {
+    font-size: 15px;
+}
+#navbarSupportedContent a.nav-item.nav-link {
+    margin-right: 15px;
+}
+#navbarSupportedContent {
+    margin-left: 20px;
+}
+a.newbg:focus, button.newbg:focus, a.newbg:hover, button.newbg:hover, a.newbg:active, button.newbg:active{
+    background:#07b395 !important;
+}
+.spacepx ng2-smart-table table {
+    background: #fff;
+    border: 1px solid #dfdada;
+}
+.spacepx ng2-smart-table-pager {
+    margin-top: 15px;
+}
+.ng2-smart-action {
+    padding: 0px 4px;
+}
+.ng2-smart-action-add-add{
+    display:none;
+}
+
+.spacepx ng2-smart-table table thead{
+    background: #ddd;
+}
+footer {
+    width: 100%;
+    background-color: #263238;
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 14px;
+}
+footer p{margin:0;}
+
+
+.spacepx {
+    margin: 20px 0px;
+    min-height: 520px;
+}
+.spacepx h2.mb-4{
+    font-size:20px;
+    margin-left: 1rem;
+}
+.spacepx a.btn.btn-success.float-right{
+    font-size:15px;
+    margin-right: 1rem;
+}
+/* a.navbar-brand{
+    visibility: hidden;
+} */
+.navbar-light .navbar-nav .nav-link {
+    padding: 5px 15px;
+}
+.toplbelSpce {
+    padding-top: 30px;
+}
+.ng2-smart-action-edit-edit {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  li.nav-item.dropdown.show .dropdown-menu.show {
+    background: #0d3876;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #1a4178;
+}
+li.nav-item.dropdown.show .dropdown-menu.show a.dropdown-item {
+    font-size: 14px;
+    color: #fff;
+}
+li.nav-item.dropdown.show .dropdown-menu.show a.dropdown-item:hover{
+    color: #fff;
+    background-color:#0f2f5b;
+}
+form#client-form {
+    background: transparent;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.panel-title a {
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    display: block;
+}
+#headingThree h4.panel-title, #headingTwo h4.panel-title, #headingOne h4.panel-title {
+    background: #2e3c51;
+    padding: 5px 15px;
+    font-size: 15px;
+    min-height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.panel-body{
+    padding: 5px 15px;
+}
+.panel.panel-default {
+    margin-bottom: 20px;
+    background: #ededed;
+}
+#aUserform {
+    background: transparent;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+.red{
+    color:red;
+}
+.panel-body label {
+    font-size: 14px;
+    color: #000;
+}
+.ngmultiselect span.dropdown-btn {
+    font-size: 14px;
+    background: #fff;
+}
+.ngmultiselect .dropdown-list{
+    font-size: 14px;
+}

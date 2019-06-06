@@ -1,0 +1,274 @@
+
+<div class="container-fluid spacepx">
+  <ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="default"
+  color="#06C6A4"
+  type="ball-clip-rotate">
+ <p style="font-size: 14px; color: white"></p>
+</ngx-spinner>
+
+  <div class=" demo">
+    <form id="client-form" [formGroup]="clientForm"(ngSubmit)="onFormSubmit()" class="addUserform" >
+
+      <div class="messages"></div>
+      <div class="row">
+          <div class="form-group col-md-12 toplbel ">
+              <div class="float-right">
+                  <a routerLink='/clients' class="btn link-btn">Cancel</a>
+                  <button type="submit" class="btn btn-primary newbg" >Save</button>
+                </div>
+          </div>
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                   
+                        <div class="col-md-6 nopadding float-left"> Client Profile </div>
+                        <div class="col-md-6 nopadding text-right float-right"> <i class="fa fa-plus" aria-hidden="true"></i></div>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body row">
+                    <div class="form-group col-md-4" *ngIf="nameVisiblity">
+                      <label for="lblSalutation">Salutation</label>
+                      <select id="salutation" formControlName="salutation" class="form-control" >
+                        <option value="">Select</option>
+                          <option value={{k.code}} *ngFor="let k of arSalutation">{{k.description}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4" *ngIf="nameVisiblity">
+                        <label for="lblName">First Name</label>
+                        <input id="first_name" formControlName="first_name" type="text" class="form-control" placeholder="Please enter first name*" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }">
+                        <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                           <div *ngIf="f.first_name.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="form_name">Last Name:<span class="red">*</span></label>
+                      <input id="last_name" type="text" formControlName="last_name" class="form-control" placeholder="Please enter last name " >
+                  
+                    </div>
+                    <div class="form-group col-md-4" *ngIf="!nameVisiblity">
+                      <label for="company_name">Company Name:<span class="red">*</span></label>
+                      <input id="company_name" type="text" formControlName="company_name" class="form-control" placeholder="Please enter company name " >
+                  
+                    </div>
+               
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblContact_type">Contact Type</label>
+                          <select id="contact_type" formControlName="contact_type" class="form-control">
+                              <option value="">Select</option>
+                              <option value="{{k.code}}" *ngFor="let k of arContactType">{{k.description}}</option>
+                              </select>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblClient_number">Client Number</label>
+                          <input id="client_number" formControlName="client_number" type="text" name="surname" class="form-control" 
+                          placeholder="Please enter clients number" >
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblInterest_id">Interests</label>
+                            <ng-multiselect-dropdown [placeholder]="'Select interest'" [data]="arIntrestList" [(ngModel)]="selectedIntrests" 
+                          [settings]="intrestSettings" (onSelect)="onIntrestItemSelect($event)" (onSelectAll)="onIntrestSelectAll($event)"
+                          id="interest_id" formControlName="interest_id"  class="ngmultiselect">
+                          </ng-multiselect-dropdown>
+                            <!-- <select id="interest_id" formControlName="interest_id" class="form-control">
+                                <option value="">Select</option>
+                                <option value="{{k.code}}" *ngFor="let k of arIntrestList">{{k.description}}</option>
+                                </select>
+                            <div class="help-block with-errors"></div> -->
+                          </div>
+                        </div>
+              
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblCategory_id">Categories</label>
+                          <!-- <select id="category_id" formControlName="category_id" class="form-control">
+                              <option value="">Select</option>
+                              <option value="{{k.code}}" *ngFor="let k of arCategories">{{k.description}}</option>
+                              </select>
+                          <div class="help-block with-errors"></div> -->
+                          <ng-multiselect-dropdown [placeholder]="'Select categories'" [data]="arCategories" [(ngModel)]="selectedItems" 
+                          [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"
+                          id="category_id" formControlName="category_id"   class="ngmultiselect">
+                          </ng-multiselect-dropdown>
+                        </div>
+                      </div>  
+                      <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblCustomer_category_id">Customer Category</label>
+                            <select id="customer_category_id" formControlName="customer_category_id" class="form-control">
+                                <option value="">Select</option>
+                                <option value="{{k.code}}" *ngFor="let k of arCatList">{{k.description}}</option>
+                                </select>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblLevel_id">Level</label>
+                            <select id="level_id" formControlName="level_id" class="form-control">
+                                <option value="">Select</option>
+                                <option value="{{k.code}}" *ngFor="let k of arLevelList">{{k.description}}</option>
+                                </select>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                   
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblCatalogue_id">Catalogue</label>
+                          <select id="catalogue_id" formControlName="catalogue_id" class="form-control">
+                              <option value="">Select</option>
+                              <option value="{{k.code}}" *ngFor="let k of arCatlogueList">{{k.description}}</option>
+                              </select>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblMarital_status_id">Martial Status</label>
+                          <select id="marital_status_id" formControlName="marital_status_id" class="form-control">
+                              <option value="">Select</option>
+                              <option value="{{k.code}}" *ngFor="let k of arStatusList">{{k.description}}</option>
+                              </select>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblMarriage_anniversary_date">Marriage Anniversary Date</label>
+                            <input id="marriage_anniversary_date" formControlName="marriage_anniversary_date" class="form-control" placeholder="Please enter marriage anniversary date" >
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+               
+                      
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblAm_customer_id">AM Customer ID</label>
+                          <input id="am_customer_id" formControlName="am_customer_id" class="form-control" 
+                          placeholder="Please enter am customer id">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblApproval_status_id">Approval Status</label>
+                            <select id="approval_status_id" formControlName="approval_status_id" class="form-control">
+                                <option value="">Select</option>
+                                <option value="{{k.code}}" *ngFor="let k of arStstus">{{k.description}}</option>
+                                </select>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblAuthorized_to_bid_id">Authorized To Bid</label>
+                            <select id="authorized_to_bid_id" formControlName="authorized_to_bid_id" class="form-control">
+                                <option value="">Select</option>
+                                <option value="{{k.code}}" *ngFor="let k of arBidList">{{k.description}}</option>
+                                </select>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblEmail">Email</label>
+                          <input id="email" formControlName="email" type="email" name="email" class="form-control" 
+                          placeholder="Please enter your email *"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblPhone">Phone</label>
+                          <input id="phone" formControlName="phone" type="tel" name="phone" class="form-control" 
+                          placeholder="Please enter your phone">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblFax">Fax</label>
+                            <input id="fax" formControlName="fax" 
+                            class="form-control" placeholder="Please enter your fax" >
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                   
+                     
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblMobile">Mobile</label>
+                          <input id="mobile" formControlName="mobile" type="tel" name="phone" class="form-control" 
+                          placeholder="Please enter your mobile">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                     </div>
+                      <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblOther_phone">Other Phone</label>
+                            <input id="other_phone" formControlName="other_phone" class="form-control" 
+                            placeholder="Please enter other phone" >
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="lblClients_vat_tin_no">Client VAT TIN No</label>
+                            <input id="clients_vat_tin_no" formControlName="clients_vat_tin_no" type="tel" name="phone" 
+                            class="form-control" placeholder="Please enter client vat tin no">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                        </div>
+                   
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblAadhar_number">Aadhar Number</label>
+                          <input id="aadhar_number" formControlName="aadhar_number" class="form-control" 
+                          placeholder="Please enter aadhar number">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="lblPan_no">PAN No</label>
+                          <input id="pan_no" formControlName="pan_no" class="form-control" placeholder="Please enter pan no">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+           
+                    
+                </div>
+            </div>
+        </div>
+
+      
+
+    </div><!-- panel-group -->
+    
+
+            </form>
+    
+</div><!-- container -->
+
+</div>
+
+

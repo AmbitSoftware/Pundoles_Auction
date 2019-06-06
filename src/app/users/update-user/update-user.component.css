@@ -1,0 +1,33 @@
+.panel-title a {
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    display: block;
+}
+#headingThree h4.panel-title, #headingTwo h4.panel-title, #headingOne h4.panel-title {
+    background: #2e3c51;
+    padding: 5px 15px;
+    font-size: 15px;
+    min-height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.panel-body{
+    padding: 5px 15px;
+}
+.panel.panel-default {
+    margin-bottom: 20px;
+    background: #ededed;
+}
+#aUserform {
+    background: transparent;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+.red{
+    color:red;
+}
+.panel-body label {
+    font-size: 14px;
+    color: #000;
+}

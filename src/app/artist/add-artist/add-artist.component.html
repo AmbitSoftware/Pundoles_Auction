@@ -1,0 +1,62 @@
+<div class="container-fluid spacepx">
+  <div class="row">  
+    <div class="col-lg-12 ">
+        <div class="container-fluid">
+            <form id="client-form" [formGroup]="addartistform">
+            <div class="controls">
+                <div class="row">
+                      <div class="form-group col-md-12 toplbelSpce">
+                          <div class="float-right">
+                              <a routerLink='/artist' class="btn link-btn">Cancel</a>
+                              <button type="submit" *ngIf="IsActionVisible" class="btn btn-primary newbg" (click)="CreateArtist()">{{actionName}}</button>
+                            </div>
+                      </div>
+                </div>        
+                <div class="row">                 
+                    <div class="form-group col-md-6">
+                        <label for="form_name">Name</label>
+                        <input id="name" type="text" formControlName="name" class="form-control" placeholder="Please enter Name">
+                        <div id="first_name_feedback" class="invalid-feedback">                          
+                        </div>
+                    </div>   
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_name">Description</label>
+                          <input id="description" type="textarea" formControlName="description" class="form-control" placeholder="Please enter description">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+              <div class="row">   
+                  <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_lastname">Date of Birth</label>
+                        <input id="year_of_birth_c" type="text" formControlName="year_of_birth_c" class="form-control" placeholder="Please enter Date of Birth">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                  </div> 
+                  <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="form_email">Date of Death</label>
+                        <input id="year_of_death_c" type="text" formControlName="year_of_death_c" class="form-control" placeholder="Please enter Date of Death">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>                                                     
+              </div>
+              <div class="row">
+                  <div class="form-group col-md-6">
+                      <label for="form_name">Status</label>
+                      <select id="status" class="form-control" formControlName="status">
+                          <option value=true>Active</option>
+                          <option value=false>Inactive</option>
+                      </select>
+                  </div>
+              </div>                   
+            </div>
+            </form>
+    </div>
+    </div>
+
+  </div>
+
+</div>

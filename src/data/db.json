@@ -1,0 +1,257 @@
+{
+    "characters": [
+    {
+        "name": "Peter Dinklage",
+        "clientNumber": "35345565",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "78987",
+        "emailAddress": "aplmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Lina Heady",
+        "clientNumber": "55567358908",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "46765",
+        "emailAddress": "dspmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Emilia Clarke",
+        "clientNumber": "43366346363463",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "433",
+        "emailAddress": "tsttmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Kit Harrington",
+        "clientNumber": "35798792324",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "34",
+        "emailAddress": "demomail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Peter Dinklage",
+        "clientNumber": "0978345345",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "56",
+        "emailAddress": "amsmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "24-11-2018"
+    },
+    {
+        "name": "Lina Heady",
+        "clientNumber": "6445687876",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "78",
+        "emailAddress": "plmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Emilia Clarke",
+        "clientNumber": "436363465453",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "8989",
+        "emailAddress": "ttmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Peter Dinklage",
+        "clientNumber": "35345565",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "57",
+        "emailAddress": "tspmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Lina Heady",
+        "clientNumber": "55567358908",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "434",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Emilia Clarke",
+        "clientNumber": "43366346363463",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "898",
+        "emailAddress": "mndmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "31-5-2019"
+    },
+    {
+        "name": "Kit Harrington",
+        "clientNumber": "35798792324",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "45",
+        "emailAddress": "krmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-9-2019"
+    },
+    {
+        "name": "Peter Dinklage",
+        "clientNumber": "0978345345",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "45",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-7-2019"
+    },
+    {
+        "name": "Lina Heady",
+        "clientNumber": "6445687876",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "45",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "18-6-2019"
+    },
+    {
+        "name": "Emilia Clarke",
+        "clientNumber": "436363465453",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "345",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-16-2019"
+    },
+    {
+        "name": "Peter Dinklage",
+        "clientNumber": "35345565",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "980",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Lina Heady",
+        "clientNumber": "55567358908",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "23",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "12-11-2019"
+    },
+    {
+        "name": "Emilia Clarke",
+        "clientNumber": "43366346363463",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "98",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Kit Harrington",
+        "clientNumber": "35798792324",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "345",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "10-11-2019"
+    },
+    {
+        "name": "Peter Dinklage",
+        "clientNumber": "0978345345",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "678",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "4-11-2019"
+    },
+    {
+        "name": "Lina Heady",
+        "clientNumber": "6445687876",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "89045",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "7-11-2019"
+    },
+    {
+        "name": "Emilia Clarke",
+        "clientNumber": "436363465453",
+        "contactType": "4523525223",
+        "companyName": "ams team",
+        "catalogue": "498085",
+        "emailAddress": "testmail@gmail.com",
+        "officePhone": "4423402485",
+        "dateCreated": "14-11-2019"
+    }],
+
+    "artists": [
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        },
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        },
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        },
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        },
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        },
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        },
+        {
+            "name": "Peter Dinklage",
+            "Description": "35345565",
+            "dateOfBirth": "4523525223",
+            "dateOfDeath": "ams team"
+        }]
+}

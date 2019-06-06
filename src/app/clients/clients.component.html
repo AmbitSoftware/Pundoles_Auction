@@ -1,0 +1,14 @@
+<div class="container-fluid spacepx">  
+    <div class="row">
+      <div class="col-6 float-left">       
+          <h2 class="mb-4">Clients (21)</h2>
+        </div>
+        <div class="col-6 float-right">   
+          <a routerLink='/add' class="btn btn-success newbg float-right">Add</a>
+        </div>
+      </div>
+    <ng2-smart-table 
+        [settings]="settings" 
+        [source]="characters"  (custom)="onCustomAction($event)">
+    </ng2-smart-table>
+</div>

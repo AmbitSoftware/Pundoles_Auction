@@ -1,0 +1,172 @@
+<div class="container-fluid spacepx">
+
+
+    <div class=" demo">
+      <form id="aUserform" class="addUserform" [formGroup]="aUserform" (ngSubmit)="onFormSubmit()" >
+  
+        <div class="messages"></div>
+        <div class="row">
+            <div class="form-group col-md-12 toplbel ">
+                <div class="float-right">
+                    <a routerLink='/users' class="btn link-btn">Cancel</a>
+                    <button type="submit" class="btn btn-primary newbg">Save</button>
+                  </div>
+            </div>
+      </div>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                     
+                          <div class="col-md-6 nopadding float-left">  User Profile </div>
+                          <div class="col-md-6 nopadding text-right float-right"> <i class="fa fa-plus" aria-hidden="true"></i></div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body row">
+                      <div class="form-group col-md-4">
+                          <label for="form_name">Username:<span class="red">*</span></label>
+                          <input id="user_name" type="text" formControlName="user_name" class="form-control" placeholder="Please enter username" [ngClass]="{ 'is-invalid': submitted && f.user_name.errors }" >
+                          <div *ngIf="submitted && f.user_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.user_name.errors.required">User Name is required</div>
+                         </div>
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="form_name">First Name:<span class="red">*</span></label>
+                          <input id="first_name" type="text" formControlName="first_name" class="form-control" placeholder="Please enter first name" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }" >
+                          <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.first_name.errors.required">First Name is required</div>
+                         </div>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="form_name">Last Name:<span class="red">*</span></label>
+                        <input id="last_name" type="text" formControlName="last_name" class="form-control" placeholder="Please enter last name " [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }">
+                        <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.last_name.errors.required">Last Name is required</div>
+                         </div>
+                      </div>
+                 
+                        <div class="form-group col-md-4">
+                          <label for="lblApproval_status_id">Status:<span class="red">*</span></label>
+                          <select id="user_status" formControlName="user_status" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.user_status.errors }" >
+                              <option value="">Select</option>
+                              <option value={{k.code}} *ngFor="let k of arUserStatus">{{k.description}}</option>
+                          </select>
+                          <div *ngIf="submitted && f.user_status.errors" class="invalid-feedback">
+                            <div *ngIf="f.user_status.errors.required">Status is required</div>
+                         </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="lblApproval_status_id">User Type:<span class="red">*</span></label>
+                            <select id="user_type" formControlName="user_type" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.user_type.errors }">
+                              <option value="">Select</option>
+                              <option value={{k.code}} *ngFor="let k of arUserType">{{k.description}}</option>
+                              </select>
+                              <div *ngIf="submitted && f.user_type.errors" class="invalid-feedback">
+                                <div *ngIf="f.user_type.errors.required">User Type is required</div>
+                             </div>
+                          </div>
+                          <div class="form-group col-md-4">
+                              <label for="department">Department:</label>
+                              <input id="department" type="text" formControlName="department" class="form-control" placeholder="Please enter department">
+                            </div>
+                        <div class="form-group col-md-4">
+                          <label for="report_to_id">Reports to:</label>
+                          <select id="report_to_id" formControlName="report_to_id" class="form-control" >
+                              <option value="">Select</option>
+                              <option value={{k.id}} *ngFor="let k of usersDropdown">{{k.user_name}}</option>
+                              </select>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      
+                  </div>
+              </div>
+          </div>
+  
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                     
+                          <div class="col-md-6 nopadding float-left"> Comminucation Details</div>
+                          <div class="col-md-6 nopadding text-right float-right"> <i class="fa fa-plus" aria-hidden="true"></i></div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body row">
+                      <div class="form-group col-md-4">
+                          <label for="primary_email">Primary Email:<span class="red">*</span></label>
+                          <input id="primary_email" type="email" formControlName="primary_email" class="form-control" placeholder="Please enter primary email" [ngClass]="{ 'is-invalid': submitted && f.primary_email.errors }">
+                          <div *ngIf="submitted && f.primary_email.errors" class="invalid-feedback">
+                            <div *ngIf="f.primary_email.errors.required">Primary Email is required</div>
+                         </div>
+                        </div>
+                      <div class="form-group col-md-4">
+                          <label for="alternate_email">Alternate Email:</label>
+                          <input id="alternate_email" type="email" formControlName="alternate_email" class="form-control" placeholder="Please enter alternate email">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="mobile">Mobile:</label>
+                        <input id="phone_mobile" type="text" formControlName="phone_mobile" class="form-control" placeholder="Please enter mobile">
+                    
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="phone">Phone:</label>
+                          <input id=" phone_home" type="text" formControlName="phone_home" class="form-control" placeholder="Please enter phone">
+                      
+                        </div>
+                 
+                     
+                      
+                  </div>
+              </div>
+          </div>
+  
+          <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                     
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                     
+                          <div class="col-md-6 nopadding float-left"> Password</div>
+                          <div class="col-md-6 nopadding text-right float-right"> <i class="fa fa-plus" aria-hidden="true"></i></div>
+                      </a>
+                  </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body row">
+                      <div class="form-group col-md-4">
+                          <label for="user_hash">New Password:<span class="red">*</span></label>
+                          <input id="user_hash" type="text" formControlName="user_hash" class="form-control" placeholder="Please enter new password" [ngClass]="{ 'is-invalid': submitted && f.user_hash.errors }">
+                          <div *ngIf="submitted && f.user_hash.errors" class="invalid-feedback">
+                            <div *ngIf="f.user_hash.errors.required">Password is required</div>
+                         </div>
+                        </div>
+                       
+                  </div>
+                  <div class="panel-body row">
+                    <div class="form-group col-md-4">
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input id="confirm_password" type="text" formControlName="confirm_password" class="form-control" placeholder="Please enter confirm password" [ngClass]="{ 'is-invalid': submitted && f.confirm_password.errors }">
+                        <div *ngIf="submitted && f.confirm_password.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirm_password.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirm_password.errors.mustMatch">Passwords must match</div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+  
+      </div><!-- panel-group -->
+      
+  
+              </form>
+      
+  </div><!-- container -->
+  
+  </div>
